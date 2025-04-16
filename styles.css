@@ -9,20 +9,81 @@ body {
 }
 
 .main-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f6f8;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  min-height: 100vh;
 }
 
-h1 {
+.header {
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
+.header p {
+  color: #666;
+  font-size: 1rem;
 }
 
-li {
+.card-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 220px;
+  padding: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s;
+  text-decoration: none;
+  color: #000;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.card:hover h3 {
+  color: #0056b3;
+}
+
+.card p {
+  font-size: 0.8rem;
+  color: #555;
   margin-bottom: 1rem;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 120px;
+  margin-top: auto;
 }
 
 .model-links {
@@ -52,4 +113,38 @@ li {
 
 .back-link:hover {
   background-color: #0056b3;
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    margin-bottom: 4.5rem;
+  }
+
+  .header h1 {
+    margin-bottom: 1.4rem;
+  }
+
+  .card-container {
+    gap: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .card h3 {
+    margin-bottom: 0rem;
+    font-size: 1.3rem;
+  }
+
+  .card {
+    width: 290px;
+  }
+
+  .card p {
+    margin: 0.8rem 0 1rem;
+  }
+
+  .card img {
+    width: 100%;
+    height: 160px;
+    margin-top: auto;
+  }
 }

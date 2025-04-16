@@ -3,21 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3D Models</title>
+    <title>Explore the Visuals</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
   </head>
   <body class="main-container">
-    <h1>Explore the Visuals</h1>
-    <ul>
-      <li><a class="model-links" href="bar-chart/index.html">Bar Chart</a></li>
-      <li>
-        <a class="model-links" href="shelby-cobra-car/index.html"
-          >Shelby Cobra Car</a
-        >
-      </li>
-      <li>
-        <a class="model-links" href="helmet/index.html">Helmet</a>
-      </li>
-    </ul>
+    <div class="header">
+      <h1>Explore the Visuals</h1>
+      <p>Dive into interactive and immersive 3D models that let you explore every angle, detail, and dimension.</p>
+    </div>
+
+    <div class="card-container">
+      <a href="bar-chart/index.html" class="card">
+        <h3>Bar Chart</h3>
+        <p>Visualize data using a sleek interactive 3D bar chart.</p>
+        <img src="results/bar-chart.png" alt="Bar Chart Thumbnail" />
+      </a>
+
+      <a href="shelby-cobra-car/index.html" class="card">
+        <h3>Shelby Cobra Car</h3>
+        <p>Admire the curves of the classic Shelby Cobra in 3D.</p>
+        <img src="results/shelby-cobra.png" alt="Shelby Cobra Thumbnail" />
+      </a>
+
+      <a href="helmet/index.html" class="card">
+        <h3>Helmet</h3>
+        <p>Examine a detailed, weathered helmet model in 3D space.</p>
+        <img src="results/helmet.png" alt="Helmet Thumbnail" />
+      </a>
+    </div>
   </body>
 </html>
