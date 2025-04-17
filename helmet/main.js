@@ -3,11 +3,23 @@ let scene, camera, renderer, controls;
 let currentModel = null;
 const canvasContainer = document.getElementById("canvas-container");
 
+const cubeTextures = [
+  "https://threejs.org/examples/textures/cube/SwedishRoyalCastle/px.jpg",
+  "https://threejs.org/examples/textures/cube/SwedishRoyalCastle/nx.jpg",
+  "https://threejs.org/examples/textures/cube/SwedishRoyalCastle/py.jpg",
+  "https://threejs.org/examples/textures/cube/SwedishRoyalCastle/ny.jpg",
+  "https://threejs.org/examples/textures/cube/SwedishRoyalCastle/pz.jpg",
+  "https://threejs.org/examples/textures/cube/SwedishRoyalCastle/nz.jpg",
+];
+
 // Initialize the scene
 function init() {
   // Create scene
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x333333);
+
+  const environment = new THREE.CubeTextureLoader().load(cubeTextures);
+  // scene.background = new THREE.Color(0x333333);
+  scene.background = environment;
 
   // Create camera
   camera = new THREE.PerspectiveCamera(
@@ -51,7 +63,7 @@ function init() {
 // Add lights to the scene
 function addLights() {
   // Ambient light
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 5);
   scene.add(ambientLight);
 
   // Directional light (sun)
@@ -73,7 +85,7 @@ function addLights() {
 function addHelpers() {
   // Grid helper
   const gridHelper = new THREE.GridHelper(10, 10);
-  scene.add(gridHelper);
+  // scene.add(gridHelper);
 
   // Axes helper (shows the X (red), Y (green), and Z (blue) axes)
   // const axesHelper = new THREE.AxesHelper(5);

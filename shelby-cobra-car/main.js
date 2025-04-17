@@ -71,7 +71,7 @@ loader.load(
       }
     });
 
-    mesh.position.set(-2, 1.05, 0);
+    mesh.position.set(-2, 0, 0);
     scene.add(mesh);
 
     document.getElementById("progress-container").style.display = "none";
