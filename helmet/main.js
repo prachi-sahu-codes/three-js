@@ -63,7 +63,7 @@ function init() {
 // Add lights to the scene
 function addLights() {
   // Ambient light
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 5);
   scene.add(ambientLight);
 
   // Directional light (sun)
