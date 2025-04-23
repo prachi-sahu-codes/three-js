@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kawasaki Ninja H2</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      #canvas-container {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script
+      async
+      src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
+    ></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.163.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a title="go back" href="/" class="back-link"
+      ><i class="fa fa-angle-left" style="font-size: 20px"></i
+    ></a>
+
+    <canvas id="canvas-container"></canvas>
+
+    <div id="info-box">
+      <h2 style="margin: 0 0 10px 0; font-size: 24px">Kawasaki ER</h2>
+      <p style="margin: 0; line-height: 1.5">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris.
+      </p>
+      <div class="accordion-container" style="margin-top: 20px">
+        <div
+          class="accordion-item"
+          style="
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            margin-bottom: 10px;
+          "
+        >
+          <div
+            class="accordion-header"
+            style="
+              display: flex;
+              align-items: center;
+              padding: 10px;
+              cursor: pointer;
+            "
+          >
+            <div
+              style="
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: #666;
+                margin-right: 10px;
+              "
+            ></div>
+            <span style="flex-grow: 1; color: white">Delivery</span>
+            <i
+              class="fa fa-chevron-down"
+              style="color: white; transition: transform 0.3s"
+            ></i>
+          </div>
+          <div
+            class="accordion-content"
+            style="max-height: 0; overflow: hidden; transition: max-height 0.3s"
+          >
+            <div style="padding: 10px; color: white">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="accordion-item"
+          style="background: rgba(0, 0, 0, 0.5); border-radius: 8px"
+        >
+          <div
+            class="accordion-header"
+            style="
+              display: flex;
+              align-items: center;
+              padding: 10px;
+              cursor: pointer;
+            "
+          >
+            <div
+              style="
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: #666;
+                margin-right: 10px;
+              "
+            ></div>
+            <span style="flex-grow: 1; color: white">Delivery From</span>
+            <i
+              class="fa fa-chevron-down"
+              style="color: white; transition: transform 0.3s"
+            ></i>
+          </div>
+          <div
+            class="accordion-content"
+            style="max-height: 0; overflow: hidden; transition: max-height 0.3s"
+          >
+            <div style="padding: 10px; color: white">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 20px 10px; color: white">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </div>
+
+    <div style="background: rgba(0, 0, 0, 0.5); border-radius: 8px; padding: 20px; margin-top: 20px;">
+      <h3 style="color: white; margin-bottom: 15px;">Pricing</h3>
+      
+      <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+        <div style="color: white;">
+          <p style="font-weight: bold; margin-bottom: 5px;">Showroom Price</p>
+          <p>₹ 25,00,000*</p>
+          <p style="font-size: 0.8em; color: #ccc;">*Ex-showroom Delhi</p>
+        </div>
+        
+        <div style="color: white;">
+          <p style="font-weight: bold; margin-bottom: 5px;">On-Road Price</p>
+          <p>₹ 29,50,000*</p>
+          <p style="font-size: 0.8em; color: #ccc;">*Approximate price</p>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 15px;">
+        <button style="
+          background: #007bff;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        ">
+          <i class="fa fa-motorcycle"></i>
+          Book a Test Ride
+        </button>
+
+        <button style="
+          background: #28a745;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        ">
+          <i class="fa fa-shopping-cart"></i>
+          Buy Bike
+        </button>
+      </div>
+    </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
