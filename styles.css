@@ -38,6 +38,7 @@ body {
 
 .card-container {
   display: flex;
+  max-width: 1500px;
   gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;
@@ -109,10 +110,22 @@ body {
   background-color: #007bff;
   padding: 4px 12px 4px 9px;
   border-radius: 5px;
+  z-index: 10;
 }
 
 .back-link:hover {
   background-color: #0056b3;
+}
+
+#info-box {
+  position: absolute;
+  right: 60px;
+  top: 60px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  max-width: 400px;
 }
 
 @media screen and (min-width: 1024px) {
